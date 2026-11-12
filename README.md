@@ -1,7 +1,7 @@
 # Education Disparities and National Life Evaluation
 
 **Measurement, prosperity adjustment and evidence within countries**  
-Mobin Seyedmohammadi · Independent empirical research · 12 November 2026
+Mobin Seyedmohammadi · 
 
 Do socioeconomic gaps in upper-secondary completion contain information about national life evaluation beyond prosperity, overall completion and income inequality? This study examines the question through cross-sectional association, repeated-country comparisons and prediction for held-out countries.
 
