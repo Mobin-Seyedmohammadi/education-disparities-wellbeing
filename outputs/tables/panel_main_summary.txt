@@ -1,0 +1,6 @@
+Country and period effects, OLS. CRV1 covariance clustered by country.
+The joint F-test of all absorbed country indicators is intentionally omitted.
+              coefficient  cluster_se   p_value
+gap10            0.008278    0.055644  0.882167
+log_gdp          1.457507    0.828798  0.083083
+completion10    -0.013231    0.097511  0.892463

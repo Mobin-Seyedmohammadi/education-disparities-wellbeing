@@ -1,0 +1,67 @@
+[
+  {
+    "slide": 1,
+    "title": "Education disparities and national life evaluation",
+    "notes": "Independent empirical study of socioeconomic completion gaps and national life evaluation. Source paper: outputs/Education_Disparities_Research_Paper.pdf. All substantive analyses are exploratory."
+  },
+  {
+    "slide": 2,
+    "title": "Measurement, association and prediction",
+    "notes": "Research questions and exploratory status: docs/research_protocol.md. Measurement depends on the concept and source populations. Conditional association depends on controls and functional form. Predictive value requires training-only fitting and held-out evaluation. These are separate tasks and none alone establishes a policy effect. Literature: Ferreira and Gignoux (2014), https://doi.org/10.1093/wber/lht004."
+  },
+  {
+    "slide": 3,
+    "title": "From raw records to auditable samples",
+    "notes": "See data/source_manifest.json for exact bytes, hashes and dates; data/processed/country_audit_primary.csv and panel_country_period_audit.csv for exclusions. Original extraction dates are unknown. GDP downloaded 12 November 2026 and last updated 11 November 2026. Metadata sources: https://www.education-inequalities.org/about ; https://www.worldhappiness.report/data-sharing/ ; https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD ."
+  },
+  {
+    "slide": 4,
+    "title": "Absolute and relative disparity answer different questions",
+    "notes": "Source: paper section 3; outputs/tables/measurement_comparison_same_countries.csv. Absolute gap = 100*(Q5-Q1) pp. Relative gap = (Q5-Q1)/((Q5+Q1)/2). WIDE wealth definitions vary by source: assets, income, consumption or other SES indicators. Neither measure universally dominates the other. The five-quintile gradient is descriptive, not population SII."
+  },
+  {
+    "slide": 5,
+    "title": "The completion gap adds little conditional information",
+    "notes": "Source: outputs/tables/model_ladder.csv, all_coefficients.csv and partial_r2.csv. Full model: ladder ~ gap10 + log_gdp + completion10 + gini10. Education beta=0.054, 95% HC3 t interval [-0.040,0.148], p=0.256. Education partial R-squared 0.021, Gini partial R-squared 0.063. The paired bootstrap difference spans both signs. These are conditional observational estimates, not evidence of a positive causal effect and not an equivalence test."
+  },
+  {
+    "slide": 6,
+    "title": "Education precedes disjoint outcome windows",
+    "notes": "Source: docs/research_protocol.md, outputs/tables/panel_sample_flow.csv and data/processed/panel_within_sample.csv. Education is observed 1-3 years before outcome-window start. Latest eligible same-survey gap in each prior block. Countries require at least two complete observations. There are 198 observations across 70 countries. Temporal ordering does not establish exogeneity."
+  },
+  {
+    "slide": 7,
+    "title": "Within-country estimates remain imprecise",
+    "notes": "Source: outputs/tables/panel_models.csv and outputs/panel_results.json. Main country/period estimate beta=0.008, 95% CRV1 country-cluster interval [-0.103,0.119], 70 countries, reference df=69. Country-history bootstrap interval [-0.076,0.095]. Balanced comparison has only 18 countries and fragile large-cluster justification. Same-source comparison has 33 countries. Neither fixed effects nor the bootstrap addresses all measurement errors and changing confounders. Cameron and Miller (2015): https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015.pdf ."
+  },
+  {
+    "slide": 8,
+    "title": "Within-country variation is limited",
+    "notes": "Source: outputs/tables/panel_identifying_variation.csv and panel_coverage.csv. Gap within variance share 13.6%, completion 2.4%, log GDP 0.6%, outcome 9.1%. Thirty countries have two periods, 22 have three and 18 have four. Main overall R-squared 0.920 includes country intercepts; within R-squared 0.119 describes the entire fitted model after removing country means. Neither is education’s causal explanatory contribution."
+  },
+  {
+    "slide": 9,
+    "title": "Held-out prediction shows little incremental gain",
+    "notes": "Source: outputs/tables/cv_summary.csv, cv_repeats.csv, cv_predictions.csv and loocv.csv. Baseline repeated-CV RMSE=0.6847; add education gap=0.6882, delta=+0.0035. Full model improves in 7/20 partitions. All models use identical splits and training-only fitting. Split SD is not a sampling confidence interval. Leave-one-out RMSE=0.6767 versus 0.6804, same qualitative result. This is country interpolation, not future-time forecasting."
+  },
+  {
+    "slide": 10,
+    "title": "A denominator can connect disparity with development",
+    "notes": "Source: outputs/simulation_design.json and outputs/tables/simulation_summary.csv. 1,000 replications, n=150 each. z~N(0,1), m=0.2+0.6 logistic(z), d~Uniform(0.04,0.16) independently, Q1=m-d/2, Q5=m+d/2, R=d/m, ladder=5+0.9z+N(0,0.7^2). Negative p<.05 rate: absolute unadjusted 2.7%, adjusted 2.4%; relative unadjusted 100%, adjusted 1.9%. The relative unconditional association is real under this DGP, not a false rejection of zero association. A causal reading would be the mistake. Parameters were not calibrated to the empirical data."
+  },
+  {
+    "slide": 11,
+    "title": "What survives the checks",
+    "notes": "Sources: paper sections 11-12 and docs/research_protocol.md. The evidence concerns these selected aggregate samples. It does not establish that education inequality lacks a causal effect or justify a policy ranking. Unknown original extraction dates, heterogeneous SES definitions, source drift, selective coverage, aggregate survey uncertainty and country dependence remain material limitations. A credible causal design would require a new source of exogenous policy variation or better comparable microdata."
+  },
+  {
+    "slide": 12,
+    "title": "Sensitivity checks preserve the design choices",
+    "notes": "Source: outputs/tables/sensitivity.csv. Region indicators exclude singleton regions to avoid HC3 leverage-one failure. Cook-flagged countries are retained in the main estimate and excluded only here. Counts >=100 is a reported-sample-size filter, not a design-based survey correction. The full 18-specification grid includes three measures, three control sets and two recency samples, with Holm-adjusted exploratory-family p-values."
+  },
+  {
+    "slide": 13,
+    "title": "Sources and study status",
+    "notes": "Data sources: https://www.education-inequalities.org/about ; https://www.worldhappiness.report/ed/2025/ ; https://data.worldbank.org/indicator/SI.POV.GINI ; https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD . Method sources: Ferreira and Gignoux (2014), https://doi.org/10.1093/wber/lht004 ; OECD/JRC (2008), https://doi.org/10.1787/9789264043466-en ; Mundlak (1978), https://www.jstor.org/stable/1913646 ; Cameron and Miller (2015), https://cameron.econ.ucdavis.edu/research/Cameron_Miller_JHR_2015.pdf . All substantive analyses are exploratory. AI tools assisted with code and writing."
+  }
+]

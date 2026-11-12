@@ -1,0 +1,33 @@
+{
+  "all_complete_country_periods": 226,
+  "all_complete_countries": 98,
+  "within_country_periods": 198,
+  "within_countries": 70,
+  "balanced_countries": 18,
+  "same_source_countries": 33,
+  "gini_complete_countries": 45,
+  "primary": {
+    "model": "Country + period effects",
+    "term": "gap10",
+    "country_periods": 198,
+    "countries": 70,
+    "estimate": 0.00827821265976879,
+    "se_cluster_country": 0.05564357111034281,
+    "ci_low": -0.10272767440700313,
+    "ci_high": 0.11928409972654071,
+    "p_value": 0.882167392474463,
+    "df_inference": 69,
+    "within_r2": 0.11947559997753754,
+    "overall_r2": 0.9196563773918283
+  },
+  "cluster_bootstrap": {
+    "successful_draws": 2000,
+    "median": 0.00941179033036359,
+    "ci_low": -0.07630929046035263,
+    "ci_high": 0.09519648237883434,
+    "resampling_unit": "Whole country histories, conditional on observed surveys and outcome aggregates"
+  },
+  "leave_one_country_beta_min": -0.004667020174051103,
+  "leave_one_country_beta_max": 0.03048144319334312,
+  "interpretation": "Exploratory longitudinal association. Repeated aggregate country observations, not individual tracking or a causal policy evaluation."
+}

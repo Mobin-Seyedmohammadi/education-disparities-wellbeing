@@ -1,0 +1,15 @@
+{
+  "replications": 1000,
+  "countries_per_replication": 150,
+  "seed": 272728,
+  "dgp": {
+    "prosperity_z": "N(0,1)",
+    "completion_midpoint": "0.2 + 0.6 * logistic(z)",
+    "absolute_gap": "Uniform(0.04,0.16), independent of z and noise",
+    "q1": "midpoint - absolute_gap/2",
+    "q5": "midpoint + absolute_gap/2",
+    "relative_gap": "absolute_gap/midpoint",
+    "life_evaluation": "5 + 0.9*z + Normal(0,0.7^2)"
+  },
+  "interpretation": "A deliberately schematic example of denominator coupling. Both inequality measures are valid but answer different descriptive questions. A nonzero unconditional relative-gap association is real in this simulated population, so it is not a false rejection of zero association. It cannot be interpreted as an education-disparity treatment effect. The experiment is not fitted to or a validation of the empirical DGP."
+}

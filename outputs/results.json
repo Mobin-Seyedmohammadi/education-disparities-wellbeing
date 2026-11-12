@@ -1,0 +1,148 @@
+{
+  "configuration": {
+    "analysis_version": "2.0.0",
+    "education_start_year": 2015,
+    "education_end_year": 2021,
+    "happiness_endpoint": 2024,
+    "happiness_period": "2022-2024",
+    "gini_start_year": 2015,
+    "gini_end_year": 2024,
+    "gdp_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "bootstrap_replications": 2000,
+    "cv_folds": 5,
+    "cv_repeats": 20,
+    "seed": 271828,
+    "survey_tie_rule": "DHS first, then MICS, then alphabetical survey name",
+    "duplicate_rule": "Collapse identical values at the measurement key. Exclude an entire country-survey-year if any required wealth quintile or national completion value conflicts.",
+    "estimand": "Equal-country conditional linear association in the observed complete-case sample. The education coefficient is life-ladder points per 10 percentage-point larger signed Q5-Q1 completion gap.",
+    "analysis_scope": "Independent empirical study of socioeconomic completion gaps and national life evaluation",
+    "panel_outcome_endpoints": [
+      2015,
+      2018,
+      2021,
+      2024
+    ],
+    "panel_education_rule": "Latest valid survey in the disjoint three-year block immediately preceding each non-overlapping three-year happiness window",
+    "panel_cluster_unit": "country"
+  },
+  "sample": {
+    "happiness_countries": 147,
+    "wide_countries": 177,
+    "paired_recent_education_countries": 87,
+    "happiness_with_education": 70,
+    "with_education_and_gini": 65,
+    "primary_countries": 65,
+    "expanded_countries": 79,
+    "regions_in_primary": 7
+  },
+  "cleaning": {
+    "wide_rows": 215578,
+    "wide_countries": 177,
+    "completion_rows_before_dedup": 5093,
+    "duplicated_measurement_keys": 62,
+    "conflicting_measurement_keys": 25,
+    "excluded_ambiguous_surveys": 7,
+    "valid_education_surveys": 710
+  },
+  "primary": {
+    "model": "M5",
+    "label": "M5",
+    "term": "gap10",
+    "n": 65,
+    "estimate": 0.054027991560167465,
+    "se_hc3": 0.04715518261408162,
+    "ci_low": -0.04029641751946472,
+    "ci_high": 0.14835240063979965,
+    "p_value": 0.2564484253718185,
+    "r2": 0.6461461468165637,
+    "adj_r2": 0.622555889937668
+  },
+  "unadjusted": {
+    "model": "M1",
+    "label": "M1",
+    "term": "gap10",
+    "n": 65,
+    "estimate": -0.05524097846428769,
+    "se_hc3": 0.06799338396656444,
+    "ci_low": -0.19111491426785313,
+    "ci_high": 0.08063295733927775,
+    "p_value": 0.41959503206150395,
+    "r2": 0.009017640614144229,
+    "adj_r2": -0.0067122381062660885
+  },
+  "partial_r2": {
+    "gap10": 0.021007765739683933,
+    "gini10": 0.06310895969162911
+  },
+  "bootstrap": [
+    {
+      "quantity": "education_beta",
+      "bootstrap_median": 0.056375808970454896,
+      "ci_low": -0.02913098026793033,
+      "ci_high": 0.14693537495912765,
+      "successful_draws": 2000
+    },
+    {
+      "quantity": "education_partial_r2",
+      "bootstrap_median": 0.023960352753990978,
+      "ci_low": 0.0001147136052760833,
+      "ci_high": 0.1447857552413773,
+      "successful_draws": 2000
+    },
+    {
+      "quantity": "gini_partial_r2",
+      "bootstrap_median": 0.06615981154251652,
+      "ci_low": 0.0008459063496318818,
+      "ci_high": 0.23195610044111853,
+      "successful_draws": 2000
+    },
+    {
+      "quantity": "partial_r2_difference",
+      "bootstrap_median": -0.03584681267810978,
+      "ci_low": -0.21456830437124272,
+      "ci_high": 0.12114828560349386,
+      "successful_draws": 2000
+    }
+  ],
+  "cv_paired": {
+    "rmse_difference_full_minus_baseline": 0.0034874641362375113,
+    "split_sd": 0.00729413125643626,
+    "min_across_splits": -0.005657199147401704,
+    "max_across_splits": 0.025459218602869038,
+    "repeats_full_better": 7,
+    "repeats": 20,
+    "interpretation": "Variation across reused random partitions, not a sampling confidence interval or independent hypothesis test."
+  },
+  "diagnostics": {
+    "breusch_pagan_lm_p": 0.7652899901234439,
+    "reset_hc3_p": 0.24537873282053524,
+    "max_vif": 3.251585965915163,
+    "condition_number_unscaled": 176.95445252778092,
+    "flagged_countries": [
+      "DR Congo",
+      "Egypt",
+      "Kyrgyzstan",
+      "Mozambique",
+      "Namibia",
+      "Zimbabwe"
+    ],
+    "fwl_slope_check": 0.05402799156016762,
+    "residual_df": 60.0
+  },
+  "gdp_api_metadata": {
+    "page": 1,
+    "pages": 1,
+    "per_page": 20000,
+    "total": 798,
+    "sourceid": "2",
+    "lastupdated": "2026-11-11"
+  },
+  "min_education_year": 2015,
+  "max_education_year": 2021,
+  "min_gini_year": 2015,
+  "max_gini_year": 2024
+}

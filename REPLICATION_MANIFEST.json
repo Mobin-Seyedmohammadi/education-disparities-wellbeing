@@ -1,0 +1,482 @@
+{
+  "project": "Education disparities and national life evaluation",
+  "version": "2.0.0",
+  "files": {
+    ".gitignore": {
+      "sha256": "74a8aa725935cd0386d6d99684db7e2bc227f406fd7495de2bb6e1d743fd0560",
+      "bytes": 46
+    },
+    "LICENSE": {
+      "sha256": "7147e9edc06848a470957958f3ef88f0a20be099395d8297709fcfcca4277868",
+      "bytes": 1213
+    },
+    "README.md": {
+      "sha256": "98f795575f69594340b71c2ecaa7d41684da9360468930a4ff5a9c201013c99a",
+      "bytes": 6840
+    },
+    "assets/fonts/DejaVuSans-Bold.ttf": {
+      "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "bytes": 708920
+    },
+    "assets/fonts/DejaVuSans.ttf": {
+      "sha256": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "bytes": 759720
+    },
+    "assets/fonts/DejaVuSerif-Bold.ttf": {
+      "sha256": "aac3f559445d23f0f567a243f91f3f6ad6cb4b5cafa1521a3479fffe0637f0bd",
+      "bytes": 356668
+    },
+    "assets/fonts/DejaVuSerif.ttf": {
+      "sha256": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
+      "bytes": 380660
+    },
+    "assets/fonts/LICENSE.txt": {
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+      "bytes": 3859
+    },
+    "config.json": {
+      "sha256": "78f7580253a87d3235970add05ed4be637fe4159ed9284b39731793eff3c1bf0",
+      "bytes": 1196
+    },
+    "data/processed/all_valid_education_surveys.csv": {
+      "sha256": "fa460c3b1a4fb1910731ee597816585851caa433e388182a204a3501f5a1258b",
+      "bytes": 246604
+    },
+    "data/processed/analysis_expanded.csv": {
+      "sha256": "99f680556f6f6111d286388f19b3001587bebe2839e649c9277d7347ae3e8f3f",
+      "bytes": 39168
+    },
+    "data/processed/analysis_primary.csv": {
+      "sha256": "7bbc92f041077642e3f58ed0b746b774df59f92f67a3dd061f95750a5bb6f110",
+      "bytes": 32282
+    },
+    "data/processed/country_audit_expanded.csv": {
+      "sha256": "141b52769f974eb6f7be3cf2cc912ec5487b3ecf33e9e26228813fa3a61cd72c",
+      "bytes": 56893
+    },
+    "data/processed/country_audit_primary.csv": {
+      "sha256": "00fc1b305bf8f3efdc64122ff9f12404f291f02e0fbb4c5ad65d9e0c5a952405",
+      "bytes": 50636
+    },
+    "data/processed/country_crosswalk.csv": {
+      "sha256": "a1ac033acf21ffe3b9805091971fcfd7123fddc26ac7c54cdf5e04f916eacfe6",
+      "bytes": 4465
+    },
+    "data/processed/panel_all_complete.csv": {
+      "sha256": "1aefc7d023a13addfb01c2089ea1b43b689a6bf70977d90f616785c03a56ce4d",
+      "bytes": 95172
+    },
+    "data/processed/panel_country_period_audit.csv": {
+      "sha256": "eaa216173d35ac5fa4a7237e22ae133d64a9a20529758389f13b876878c7eaf3",
+      "bytes": 129850
+    },
+    "data/processed/panel_within_sample.csv": {
+      "sha256": "11bbae864042e0446227d80111fe7c7198d0f00881e6732a9d3c44fdd60b4190",
+      "bytes": 83390
+    },
+    "data/raw/GINI.csv": {
+      "sha256": "3936b186c1127d8dfcea43fc0b38845d6124ddd4b2fb0f77f062d5c857f9eda6",
+      "bytes": 74864
+    },
+    "data/raw/WIDE.csv.gz": {
+      "sha256": "2db2864432535d1c69173191e74802c7e2f6569644ff85e98ec8b4ea193990ad",
+      "bytes": 17364231
+    },
+    "data/raw/gdp_panel_2013_2015.json": {
+      "sha256": "34520dc9067799e8b3a451328caea00084b485d4dfaccd78ad550f34a7d0d7cb",
+      "bytes": 198502
+    },
+    "data/raw/gdp_panel_2016_2018.json": {
+      "sha256": "e89b8de167458e89816a91695887cfc64674f52637649478a7747f0ace53d1b0",
+      "bytes": 198508
+    },
+    "data/raw/gdp_panel_2019_2021.json": {
+      "sha256": "6d16c670f467486fd03ce08dc306a8a5c31f7cb37ca94a394619ca597734b5f3",
+      "bytes": 198531
+    },
+    "data/raw/gdp_ppp_2022_2024.json": {
+      "sha256": "43918a4decc74a439ad0bf53027184f833c5ffe249ebadc0a44c72b22dec142c",
+      "bytes": 198457
+    },
+    "data/raw/happiness2025.xlsx": {
+      "sha256": "3d1b8af60ec8b095a5d5f0ad0298b87ba2b7514bb79bf18a44c6f6ddd3280b6d",
+      "bytes": 148164
+    },
+    "data/source_manifest.json": {
+      "sha256": "97e63245e7e9d64afaa4f4d9a3888c46987757f3935da6a83335b8de56857aa6",
+      "bytes": 3467
+    },
+    "docs/data_dictionary.md": {
+      "sha256": "e6a585e91f286f2a50e3cde34affc8ce626fb1d0d9046a581a67ebc03ea80597",
+      "bytes": 4066
+    },
+    "docs/methods_explained.md": {
+      "sha256": "882eeb05ebb03c0118117bc384b966b31bedafe594b223017e521a394210d46a",
+      "bytes": 9225
+    },
+    "docs/research_paper.md": {
+      "sha256": "bd53c4a5d200b8337b68da914d2e0b3c4c695317a36a56ddc15a937c6713e845",
+      "bytes": 36803
+    },
+    "docs/research_protocol.md": {
+      "sha256": "b08266c5d65b10dd6c2d002995a01b1910a1c96088c9266d1dc511db1bd25967",
+      "bytes": 7815
+    },
+    "notebooks/education_disparities_research.ipynb": {
+      "sha256": "2e51decc3a60e7954fc69129998acd364c80a35e82856a072fe876f5064ff540",
+      "bytes": 2134233
+    },
+    "outputs/Education_Disparities_Research_Paper.pdf": {
+      "sha256": "e1a95b633121a16e2e11e1d051c2b78294ef1a116c46fdb54b05cd2204aa2365",
+      "bytes": 1089672
+    },
+    "outputs/figures/01_group_completion.pdf": {
+      "sha256": "ba9b5329031e3d8f9aa5fe4d45e823e8da08b1e1b9ae32edf7a9972bd62ebb28",
+      "bytes": 27465
+    },
+    "outputs/figures/01_group_completion.png": {
+      "sha256": "8daf00823a69ff39f7a01c9da196a5e13a04afc1ae69e9d0c35647249bed7c62",
+      "bytes": 105789
+    },
+    "outputs/figures/02_raw_and_adjusted.pdf": {
+      "sha256": "8666185b2b53b7204007b01e346e8bbedf019180f71272f94445049eeb9e5045",
+      "bytes": 29047
+    },
+    "outputs/figures/02_raw_and_adjusted.png": {
+      "sha256": "3c4e17ee4796cb50ded2763ef890d461c91eb6c85ef51c3766742907fa6acac3",
+      "bytes": 157024
+    },
+    "outputs/figures/03_model_ladder.pdf": {
+      "sha256": "e74a2de3be40e36e5064b0344cbb605e434169093fe0019f866abf42103cbcf3",
+      "bytes": 23247
+    },
+    "outputs/figures/03_model_ladder.png": {
+      "sha256": "a968992d71d71b930e6fbc8a8ee183f01d576bf8970c805f2ea4a2515176125d",
+      "bytes": 84055
+    },
+    "outputs/figures/04_prediction.pdf": {
+      "sha256": "61afb59f36cec29d9591339acb71270359f4182a7e2a38b8cfe46276b952a50a",
+      "bytes": 24179
+    },
+    "outputs/figures/04_prediction.png": {
+      "sha256": "84d73ebe9b6e91deaa367b69c456d0430b37ed56190a3986aee51777db706b6a",
+      "bytes": 94607
+    },
+    "outputs/figures/05_sensitivity.pdf": {
+      "sha256": "bdf887ed2fdbc2c8517759d85ce49ecd22d83d08c40966f7ddb0bbb7cfa7e05f",
+      "bytes": 29907
+    },
+    "outputs/figures/05_sensitivity.png": {
+      "sha256": "13f53109126e0438a0e864e535620e604b05ae228f85b2148a9afb39a29077b7",
+      "bytes": 187463
+    },
+    "outputs/figures/06_diagnostics.pdf": {
+      "sha256": "5c05cdf3de263c8376cf885929b37d5870a129134acf6b6d8085ae0398133898",
+      "bytes": 29526
+    },
+    "outputs/figures/06_diagnostics.png": {
+      "sha256": "b832eee8fb675b32589bac5c297d18c5a9340326fcc8a84a6ddb899d837be721",
+      "bytes": 147682
+    },
+    "outputs/figures/07_data_vintages.pdf": {
+      "sha256": "ffb2031db1d099e356a9427049795f22c00ccba54cda595a0a29f9691335438f",
+      "bytes": 21367
+    },
+    "outputs/figures/07_data_vintages.png": {
+      "sha256": "cd4cdc0af8c4dcfba7a0b2c57951f0b44414354371d139baf5215454956cebf6",
+      "bytes": 73769
+    },
+    "outputs/figures/08_panel_estimates.pdf": {
+      "sha256": "b5e717aa75d3eac5806f90e9d1dd44185f60f2cc8d611b58f742e5bce8996db0",
+      "bytes": 27833
+    },
+    "outputs/figures/08_panel_estimates.png": {
+      "sha256": "815fc3fc476379077a3ec38a01a38e8d430083a9c3622adc30106c7087d7ed05",
+      "bytes": 159402
+    },
+    "outputs/figures/09_panel_histories.pdf": {
+      "sha256": "5fac9acde00477769c0a83e0ebbb491918f5642e7c1f43486b9d89caef9005c6",
+      "bytes": 25634
+    },
+    "outputs/figures/09_panel_histories.png": {
+      "sha256": "8fce07a63024ebe3dc3db9b04923677b48509c34719785589039c30c04a975f0",
+      "bytes": 455806
+    },
+    "outputs/figures/10_specification_grid.pdf": {
+      "sha256": "b7ffa402428420514d4f2f9ca3d82a7719e9cc8f31f7503171325704087214a0",
+      "bytes": 29755
+    },
+    "outputs/figures/10_specification_grid.png": {
+      "sha256": "be051914cf488ead8aeee18fcdbf6d03353b5d7290a2d27a4d6dea571a130c7c",
+      "bytes": 240135
+    },
+    "outputs/figures/11_measurement_simulation.pdf": {
+      "sha256": "42267950ae891a8a4577d89aab4c385a7819eb41d786d397d405650f67cea4ff",
+      "bytes": 23638
+    },
+    "outputs/figures/11_measurement_simulation.png": {
+      "sha256": "2d9a65c049d358f4a43f4e216cce2593207169731674c84756d5629b2abe9951",
+      "bytes": 92814
+    },
+    "outputs/figures/13_measurement_comparison.pdf": {
+      "sha256": "4302a30eca1678479184a7c14af1af002d8f9dbeaa8524fa73f43e7c968f8835",
+      "bytes": 21760
+    },
+    "outputs/figures/13_measurement_comparison.png": {
+      "sha256": "7afa30b9322b0358f6d301c0965e1018c716764e2070608836d1977530bb0680",
+      "bytes": 66534
+    },
+    "outputs/notebook_execution.json": {
+      "sha256": "27426ef27f7c08b9bad3656ad5971e4492762ecf4b0d598846f89e264206e790",
+      "bytes": 152
+    },
+    "outputs/panel_results.json": {
+      "sha256": "d096353caec9e1c468bcecbcecb4e41abf469af6eb20fd73fa4aec3e9802d044",
+      "bytes": 1182
+    },
+    "outputs/presentation_verification.json": {
+      "sha256": "c86f0070d86e7d008efd69bb4802c51e354137325760b66a518adf56f3d617a6",
+      "bytes": 334
+    },
+    "outputs/results.json": {
+      "sha256": "d235e784ad7eb4f0504f3ff2d55838c5a3d196e1bbfcaf2181fdb6fb98c37c90",
+      "bytes": 4519
+    },
+    "outputs/run_metadata.json": {
+      "sha256": "02063d592ac35fb2c9f9f7c5c2997d0c7450fdf9b379cad6c79f5c9c384cfcc1",
+      "bytes": 4917
+    },
+    "outputs/simulation_design.json": {
+      "sha256": "7f332b54348d2af3bd9e6252ce45eef44dd8ac25a2918f909b56fbb15d3c4f1e",
+      "bytes": 865
+    },
+    "outputs/tables/M1_summary.txt": {
+      "sha256": "a2d3759a1bb668f1e8fffe0a1ece68e0905e9f06a2a4ba2d1241a5e2f3674bd3",
+      "bytes": 1801
+    },
+    "outputs/tables/M2_summary.txt": {
+      "sha256": "7a4a79fc01db0eef6a3125100c9344c210993bc5872eb0fb81f89647bbb225dd",
+      "bytes": 1801
+    },
+    "outputs/tables/M3_summary.txt": {
+      "sha256": "5080bf1830da05f04c0643abceb970e88d63886ca9498178b4326995bfe8a6ff",
+      "bytes": 1880
+    },
+    "outputs/tables/M4_summary.txt": {
+      "sha256": "da05533eb3ccf215acd370c9d4e0bfa7fce80b52bbc20a43252729c6ec71d3e5",
+      "bytes": 1973
+    },
+    "outputs/tables/M5_summary.txt": {
+      "sha256": "37b75e7a8cf7432db632b9909dbb3235e88dadb57cccbbc13eb99c646195aecc",
+      "bytes": 2054
+    },
+    "outputs/tables/all_coefficients.csv": {
+      "sha256": "bdb9462bc8d574ef0e2daedc81802ef9ac1af71e83ea79675b7a89e6a518629a",
+      "bytes": 2901
+    },
+    "outputs/tables/alternative_measures.csv": {
+      "sha256": "15a5091aebcfc5fc1f95b3b70ab79829327a1517bbc9bf8a1ca3c1b55dd5931f",
+      "bytes": 513
+    },
+    "outputs/tables/correlations.csv": {
+      "sha256": "aecdcfa22b83c89e40f6b4e25ac3b45a237e26f20c1cb4aedb4998967318d59e",
+      "bytes": 222
+    },
+    "outputs/tables/country_bootstrap_draws.csv": {
+      "sha256": "b1def89c1626d3fa603b1c725d2b7f1806f324b341664b666b82109c6ce8b2bf",
+      "bytes": 164282
+    },
+    "outputs/tables/country_bootstrap_summary.csv": {
+      "sha256": "cca170bdbdda315e80cae3bbd9c311357d8e6d5809e657e5d7a3e2a80030eea0",
+      "bytes": 400
+    },
+    "outputs/tables/coverage_by_income_group.csv": {
+      "sha256": "bb6b829000668b1492032456e5fffa917c5281b479cd2ce958f0397757634245",
+      "bytes": 133
+    },
+    "outputs/tables/cv_predictions.csv": {
+      "sha256": "e1ceda1894235fac153ca1cbf1d2f63a4d0e97428d8b256a05b4eee3d4244652",
+      "bytes": 421397
+    },
+    "outputs/tables/cv_repeats.csv": {
+      "sha256": "66ddb7e783efc3a77d6f183d4463e5d8b146625332cce8f47b671530a4ee143c",
+      "bytes": 10395
+    },
+    "outputs/tables/cv_summary.csv": {
+      "sha256": "8a92b980da256e7d2fe52d209cef8fc028e16ba44dea076be72ec7954ecf3ee9",
+      "bytes": 698
+    },
+    "outputs/tables/descriptive_statistics.csv": {
+      "sha256": "478ffb7176a0a6e33c2d627443876e6641d0e388905c8c72f4cac1f5c32fde04",
+      "bytes": 784
+    },
+    "outputs/tables/duplicate_measurements.csv": {
+      "sha256": "b898733ce8069a4f1b6b15a5a7c8b36336531c70b56739e05d71810f44963929",
+      "bytes": 1891
+    },
+    "outputs/tables/excluded_ambiguous_surveys.csv": {
+      "sha256": "995af65ddae7c2a37afc6d5c45072fa6ec11bd562f59dcbe0d95a10c28c132d1",
+      "bytes": 126
+    },
+    "outputs/tables/influence.csv": {
+      "sha256": "16f0ad764938a44a364b59f3a62ee9218c94eb1f8d071499523a2b4d1ea8bd26",
+      "bytes": 7741
+    },
+    "outputs/tables/leave_one_country_out.csv": {
+      "sha256": "55a64242d0b9519d0f95dd5fb936fd17457aafcd4c5630d2092e041b09aea67c",
+      "bytes": 2222
+    },
+    "outputs/tables/loocv.csv": {
+      "sha256": "294f82d3cca3a38cce06b41e7cf7b9bc0511ae728bca3fb52011992cc6b825cf",
+      "bytes": 245
+    },
+    "outputs/tables/measurement_comparison_same_countries.csv": {
+      "sha256": "399da06227d47e3c553976d3832360d5fa72f7624380e64c627fedff850a13c2",
+      "bytes": 1103
+    },
+    "outputs/tables/model_ladder.csv": {
+      "sha256": "0e9ad7e91d8bc18d338b188fe533ab7577b57032317aa4d4ce445a8ff082d424",
+      "bytes": 945
+    },
+    "outputs/tables/panel_all_main_coefficients.csv": {
+      "sha256": "5dc162a2daae13658fccdcb53c4b0901797e99992f85c1683f1177adec2b1df6",
+      "bytes": 665
+    },
+    "outputs/tables/panel_cluster_bootstrap_draws.csv": {
+      "sha256": "dccc85255aba7bdf8f025d765b86b11fca5e9c85afa28be540821e62b545c569",
+      "bytes": 41815
+    },
+    "outputs/tables/panel_coverage.csv": {
+      "sha256": "c27cd92064db29ceb8e8bb32a85322ad85e2b592d966ed9910feccb4a3ec5e11",
+      "bytes": 33
+    },
+    "outputs/tables/panel_identifying_variation.csv": {
+      "sha256": "2daa65b8ead328cd4b4463fb29685b503167d966da09a2e875562f9462732ddf",
+      "bytes": 321
+    },
+    "outputs/tables/panel_leave_one_country_out.csv": {
+      "sha256": "4abb81f9f2d9ebb6e2a1abba0d7e3b8c1c05f4b94474ee39f31c663edcc01488",
+      "bytes": 1780
+    },
+    "outputs/tables/panel_main_summary.txt": {
+      "sha256": "7550ed228da22f45c0f4617e5134b5de72a2beb114629e4e28d7f4cf4be94f76",
+      "bytes": 341
+    },
+    "outputs/tables/panel_models.csv": {
+      "sha256": "8616f56263dbfcded41c93ca0be043de2063988eb5704f7262e7782ec04d8e19",
+      "bytes": 1756
+    },
+    "outputs/tables/panel_sample_flow.csv": {
+      "sha256": "3679dc79ba9b8dcbe3b4b4970f418dbbffbdd6e74c878c0df9d83e249274f67c",
+      "bytes": 147
+    },
+    "outputs/tables/panel_territory_exclusions.csv": {
+      "sha256": "748f5998da1d4cca53b9afc37ff5c8820a97166172d09555143bbd35a77758c6",
+      "bytes": 370
+    },
+    "outputs/tables/panel_within_between.csv": {
+      "sha256": "5d54d9602a71cd3404118547b26f03f3a9e12510cfe8688ff2d5fae986b3db64",
+      "bytes": 486
+    },
+    "outputs/tables/partial_r2.csv": {
+      "sha256": "93491ccdeb04cfde194819f9762cd5da2e0cd1c9cfe0a38a4b40e9d571d69495",
+      "bytes": 75
+    },
+    "outputs/tables/partial_regression.csv": {
+      "sha256": "08ed5deba3121eb4ff7bd7da6309c7d798ec291f953e6d876c691daab7e0ee71",
+      "bytes": 3459
+    },
+    "outputs/tables/region_transport.csv": {
+      "sha256": "f2aee1d6532973764ab5c556c8d1ee2f9b23ba9e0c30efbb8ef5ba9aa7a34567",
+      "bytes": 927
+    },
+    "outputs/tables/sample_selection.csv": {
+      "sha256": "49842905311be53b99c97736adaf0242a5af3db0db6468e7086bc68caf0cef32",
+      "bytes": 295
+    },
+    "outputs/tables/sensitivity.csv": {
+      "sha256": "6c5421069bbc97ad452b520b71a1a3b32ba4156ecf7cf0bcfbcc0f250f6faabe",
+      "bytes": 2386
+    },
+    "outputs/tables/simulation_draws.csv": {
+      "sha256": "20422d8b17c3f3bcaa8d2a33257ca0631e5a73ef792bdc984093331540fa14f6",
+      "bytes": 263438
+    },
+    "outputs/tables/simulation_summary.csv": {
+      "sha256": "9bfb07236e3991d0800023348fcc02da29981290120880793e1658dd9918e7b0",
+      "bytes": 311
+    },
+    "outputs/tables/specification_grid.csv": {
+      "sha256": "67df207c6319ac1a605ca393d55d5eba237b15e02150e1ed976e8421aca1efe3",
+      "bytes": 3072
+    },
+    "outputs/tables/vif.csv": {
+      "sha256": "fe19ee54a43fe89e3403bae3b209b9456cc0af67cd8e9f2e184121aa1104c94e",
+      "bytes": 116
+    },
+    "outputs/tables/weighted_diagnostic.csv": {
+      "sha256": "2a8697914f3cca8793bd0929acb9edca03cd468fdc43bc2d531e564f9626c483",
+      "bytes": 307
+    },
+    "outputs/verification.json": {
+      "sha256": "8bcacba1abcee35727a9f85e2539713de36736d007f5d363f8ed523ff9bbd4c8",
+      "bytes": 816
+    },
+    "presentation/BUILD_NOTES.md": {
+      "sha256": "a97f944e5c99d669332e5e617e396f512df85c886ec96e42a3d0e72f18811ece",
+      "bytes": 562
+    },
+    "presentation/Education_Disparities_Seminar.pptx": {
+      "sha256": "3e43eea830ca3de3e0d1ed94755667ec22e7a3291d2266f87e657a4d5ac6c359",
+      "bytes": 503464
+    },
+    "presentation/speaker_notes.json": {
+      "sha256": "e7cdc3c9f2cd10216560c7e3c25d3801b7e77c3f20675f945a11f8d4cf1e70dd",
+      "bytes": 7030
+    },
+    "presentation/speaker_notes.md": {
+      "sha256": "6191d05b8f356d59e7576a3733934169defd0c412b062233d7faf3574e2d8e6f",
+      "bytes": 6420
+    },
+    "reproduce.py": {
+      "sha256": "c612b10bd56ead2e0b3168655364411fc5ee883fc8e53595c6e8633883b5a14d",
+      "bytes": 404
+    },
+    "requirements.txt": {
+      "sha256": "21686a7607b34b9c3df05d5bd3f5a2077747bbc3f9669f930f4ae8981b44371a",
+      "bytes": 205
+    },
+    "src/__init__.py": {
+      "sha256": "9cb2098c2508b0566ac052ee94c76c6549698ac1ef75ee5f58933433bb6351bb",
+      "bytes": 83
+    },
+    "src/analysis.py": {
+      "sha256": "6a39059c4f38e7f7f8d00a5a89e2ca980ac23bf700f20354fe5a1b263e05ff79",
+      "bytes": 32581
+    },
+    "src/make_notebook.py": {
+      "sha256": "9552ea566f0f0ec1b2ba8273ec8225843a7b85bb4006e260465ca344b88f6214",
+      "bytes": 15574
+    },
+    "src/make_report.py": {
+      "sha256": "e4aabe69524fe6b3e2e6c529ab92ea602119e381f318968ff7cef3178c5f2c33",
+      "bytes": 43588
+    },
+    "src/measurement.py": {
+      "sha256": "5d97c539cf20cfe9247ac0e1fd271d9efef5120b6538fead0cd9668167371bdc",
+      "bytes": 1357
+    },
+    "src/panel.py": {
+      "sha256": "562cc08d4bfe5bb3c3e9c1bc2452ba12a31e893394dfd89295208dda9a8d6d4b",
+      "bytes": 16275
+    },
+    "src/simulation.py": {
+      "sha256": "e2a09d06c2b0dbc70f0a3918cdbfd400a2a5e940e9ec9c801dd79264f34d3819",
+      "bytes": 3939
+    },
+    "src/verify.py": {
+      "sha256": "4d1851f68c963aa736e584337d5c27108123eb825f62d49df64d368dbb740de4",
+      "bytes": 4665
+    }
+  }
+}

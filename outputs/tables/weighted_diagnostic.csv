@@ -1,0 +1,2 @@
+model,label,term,n,estimate,se_hc3,ci_low,ci_high,p_value,r2,adj_r2
+Inverse ladder-variance weights (diagnostic),Inverse ladder-variance weights (diagnostic),gap10,65,0.05138059147808003,0.05540974732077245,-0.059455405406021615,0.16221658836218167,0.35749411732556885,0.6532977728750778,0.6301842910667497

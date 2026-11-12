@@ -1,239 +1,103 @@
-# Is Educational Inequality a Stronger Predictor of National Happiness Than Income Inequality?
+# Education Disparities and National Life Evaluation
 
-**Author:** Mobin Seyedmohammadi
-**Institution:** Sapienza University of Rome — Data Management and Analysis
+**Measurement, prosperity adjustment and evidence within countries**  
+Mobin Seyedmohammadi · Independent empirical research · 12 November 2026
 
----
+Do socioeconomic gaps in upper-secondary completion contain information about national life evaluation beyond prosperity, overall completion and income inequality? This study examines the question through cross-sectional association, repeated-country comparisons and prediction for held-out countries.
 
-## The Short Answer
+It uses public UNESCO GEM/UIS WIDE, World Happiness Report and World Bank data. All analyses are exploratory and observational. The estimates do not identify causal policy effects.
 
-**Yes — and it's not close.**
+## Main findings
 
-Educational inequality (EII) explains **37% of cross-national variance in happiness** (R²=0.369, p<0.001). The Gini index explains only **6%** (R²=0.062). When both are included in a joint model, Gini loses statistical significance entirely (p=0.647) and its coefficient even flips sign — suggesting no independent negative effect on happiness beyond what it shares with educational inequality.
+| Analysis | Result | Interpretation |
+|---|---|---|
+| Cross section, 65 countries | +0.054 ladder points per 10 pp larger completion gap; 95% HC3 interval [-0.040, 0.148] | An uncertain conditional association |
+| Country panel, 198 observations across 70 countries | +0.008; country-clustered 95% interval [-0.103, 0.119] | No precise independent relationship in the observed histories |
+| Measurement comparison on the same 65 countries | Unadjusted R²: relative gap 0.414, absolute gap 0.009, rank gradient 0.003 | Disparity definitions capture different information about attainment |
+| Held-out country prediction | Baseline RMSE 0.685; adding the gap 0.688 | Little stable incremental predictive gain in this evaluation |
 
-This finding holds across three independent robustness checks, a bootstrapped confidence interval analysis, and a non-linear Random Forest validation.
+The evidence is limited and imprecise. It does not establish zero effects or show that educational equality lacks social value. Coverage, measurement and identification limitations remain central to interpretation.
 
----
+## Read the study
 
-## Results at a Glance
+- [Research paper](outputs/Education_Disparities_Research_Paper.pdf)
+- [Executed notebook](notebooks/education_disparities_research.ipynb)
+- [Seminar slides](presentation/Education_Disparities_Seminar.pptx)
+- [Editable manuscript](docs/research_paper.md)
+- [Research protocol](docs/research_protocol.md)
+- [Methods explained](docs/methods_explained.md)
+- [Data dictionary](docs/data_dictionary.md)
 
-| Model | Predictor(s) | R² | Adj. R² | p-value |
-|-------|-------------|:--:|:-------:|:-------:|
-| M1 | Education Inequality (EII) | 0.369 | 0.364 | < 0.001 ✅ |
-| M2 | Income Inequality (Gini) | 0.062 | 0.053 | 0.007 ✅ |
-| M3 | EII + Gini (joint) | 0.371 | 0.360 | EII: <0.001 ✅ · Gini: 0.647 ❌ |
+## Reproduce the analysis
 
-**Bootstrap 95% CI (n=2000 resamples):**
-- EII: R² = 0.374, CI [0.239, 0.502]
-- Gini: R² = 0.069, CI [0.006, 0.171]
-- CIs do not overlap → difference is statistically meaningful
-
-**Random Forest validation (5-fold CV):** R² = 0.357 ± 0.040 — near-identical to OLS, confirming the relationship is linear. EII permutation importance is **9.5× larger** than Gini (0.758 vs 0.080).
-
----
-
-## Methodology
-
-### 1. Education Inequality Index (EII)
-
-Built from six pairwise relative gap indicators drawn from the UNESCO WIDE dataset across three disparity dimensions — sex, wealth quintile, and location (rural/urban):
-
-| Metric | Sex Gap | Wealth Gap | Location Gap |
-|--------|:-------:|:----------:|:------------:|
-| Upper secondary completion rate | ✅ | ✅ | ✅ |
-| Minimum math proficiency (Level 1) | ✅ | ✅ | ✅ |
-
-**Why only these three dimensions?** Formal coverage analysis showed Ethnicity (37%), Religion (46%), and Disability (24%) had insufficient country coverage — including them would require imputing >40% of values, introducing more noise than signal.
-
-**Gap formula** — scale-independent relative gap between boundary groups A and B:
-
-$$\text{gap}_{m,d} = \frac{|\bar{m}_A - \bar{m}_B|}{(\bar{m}_A + \bar{m}_B)/2}$$
-
-**Index construction — three steps:**
-
-$$z_{ij} = \frac{x_{ij} - \bar{x}_j}{\sigma_j} \quad \text{(standardise)}$$
-
-$$\text{EII}^*_i = \sum_{j=1}^{6} w_j \cdot z_{ij} \quad \text{(PCA-weighted combination)}$$
-
-$$\text{EII}_i = \frac{\text{EII}^*_i - \min}{\max - \min} \quad \text{(min-max scale to [0,1])}$$
-
-Weights $w_j$ are absolute PC1 loadings from PCA, normalised to sum to 1. PC1 explains 49.2% of variance — more than double any other component. Standardisation happens **before** PCA to avoid scale dominance.
-
-**PCA-derived weights:**
-
-| Indicator | Weight | vs Equal (1/6=0.167) |
-|-----------|:------:|:--------------------:|
-| upsec_location_gap | 0.203 | ↑ above |
-| math_wealth_gap | 0.185 | ↑ above |
-| upsec_wealth_gap | 0.177 | ↑ above |
-| upsec_sex_gap | 0.157 | ↓ below |
-| math_location_gap | 0.156 | ↓ below |
-| math_sex_gap | 0.123 | ↓ below |
-
-Location and wealth gaps dominate. Sex gaps carry the least weight — gender parity has improved more than wealth and geographic parity globally.
-
-### 2. Income Inequality — Gini Index
-
-Source: World Bank (2000–2024). **Data quality assessment revealed serious coverage issues** — 42% of countries have fewer than 5 years of observations, and the median country has only 3 data points.
-
-**Methodology — combined approach:**
-- **Primary estimate:** most recent available Gini value per country
-- **Reliability flag:** ≥5 years = reliable (n=98 in merged sample); <5 years = flagged
-- **Correlation between mean and most recent Gini:** r = 0.920 — near-identical rankings, but most recent is more methodologically defensible
-
-### 3. National Happiness
-
-Cantril Ladder scores from the **World Happiness Report 2025** (2024 Gallup World Poll wave). Range: 1.36 (Afghanistan) – 7.74 (Finland).
-
-### 4. Statistical Analysis
-
-- Three OLS models with **HC3 heteroskedasticity-robust standard errors**
-- **Breusch-Pagan test** for heteroskedasticity (p=0.180 — not detected; HC3 conservative but valid)
-- **VIF check** — both predictors VIF=1.28, no multicollinearity
-- **2000-iteration bootstrap** for R² confidence intervals
-- **Cook's distance** influence diagnostics
-- **Constrained Random Forest** (max_depth=3, min_samples_leaf=10) with permutation importance
-- **Bonferroni correction** applied to all multiple comparison tests
-- **Pearson vs Spearman** robustness check (all key correlations robust, Δ<0.05)
-
----
-
-## Robustness Checks
-
-Three independent sensitivity analyses all strengthen the main finding:
-
-| Check | n | EII R² | Gini p in M3 | Conclusion |
-|-------|---|:------:|:------------:|-----------|
-| Full sample | 113 | 0.369 | 0.647 | EII dominates |
-| Excl. 4 influential obs. | 109 | 0.431 | 0.939 | EII stronger |
-| Reliable Gini only (≥5 yrs) | 82 | 0.390 | 0.018* | EII stronger |
-
-*p=0.018 does not survive Bonferroni correction (threshold=0.017) and coefficient is positive (+0.033), suggesting suppression not genuine negative effect.
-
-**Influential observations identified (Cook's D > 4/n = 0.035):**
-
-| Country | Cook's D | Pattern |
-|---------|:--------:|---------|
-| Nicaragua | 0.148 | High EII, unexpectedly happy (Latin American paradox) |
-| Guatemala | 0.090 | High EII, unexpectedly happy (Latin American paradox) |
-| Sierra Leone | 0.046 | High EII, very unhappy |
-| Ukraine | 0.043 | Low EII, unhappy (geopolitical conflict) |
-
----
-
-## Key Visualisations
-
-The analysis produces 13 publication-quality figures:
-
-| Figure | Description |
-|--------|-------------|
-| `fig_gap_distributions` | Distribution of sex/wealth/location gaps |
-| `fig_missingness_by_income` | Systematic missingness bias by income group |
-| `fig_indicator_correlation` | Correlation heatmap between 6 EII indicators |
-| `fig_pca_weights` | PCA-derived weights vs equal weighting |
-| `fig_pca_regions` | PCA scatter with Mahalanobis ellipses & outlier labels |
-| `fig_scree_plot` | Variance explained per component |
-| `fig_eii_ranking` | Top/bottom 10 countries by EII |
-| `fig_eii_by_region` | EII strip plot by world region |
-| `fig_gini_data_quality` | Gini coverage distribution & mean vs recent scatter |
-| `fig_correlation_matrix` | Bonferroni-corrected correlation matrix |
-| `fig_scatter_regression` | Scatter plots with bootstrap 95% CI bands |
-| `fig_influence_diagnostics` | Cook's distance & leverage vs residual |
-| `fig_r2_comparison` | Bootstrap R² distributions |
-| `fig_rf_validation` | Random Forest CV R² & permutation importance |
-| `fig_regional_correlations` | EII vs Gini correlations by region |
-| `fig_summary_dashboard` | 4-panel summary figure |
-
----
-
-## Repository Structure
-
-```
-inequality-happiness/
-│
-├── data/
-│   ├── WIDE.csv                  # UNESCO WIDE educational indicators
-│   ├── GINI.csv                  # World Bank Gini index (2000–2024)
-│   └── happiness2025.xlsx        # World Happiness Report 2025
-│
-├── outputs/
-│   ├── final_dataset.csv         # 113-country merged analysis dataset
-│   └── fig_*.png                 # All 16 output figures
-│
-├── inequality_happiness_analysis.ipynb   # Full analysis notebook
-├── requirements.txt
-└── README.md
-```
-
----
-
-## Getting Started
-
-### Prerequisites
+Use Python 3.12. All required data are bundled; estimation and report generation require no data download or credentials.
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python reproduce.py
 ```
 
-### Data Sources
+On Windows, activate with `.venv\Scripts\activate`.
 
-| Dataset | Source | Access |
-|---------|--------|--------|
-| UNESCO WIDE | [education-inequalities.org](https://www.education-inequalities.org/) | Free download |
-| World Bank Gini | [data.worldbank.org](https://data.worldbank.org/indicator/SI.POV.GINI) | Free download |
-| World Happiness Report | [worldhappiness.report](https://worldhappiness.report/) | Free download |
-
-Place files in `data/` as named above, then run all cells top-to-bottom.
+To rebuild and execute the notebook:
 
 ```bash
-jupyter notebook inequality_happiness_analysis.ipynb
+python -m src.make_notebook --execute
 ```
 
----
+For environments that restrict local kernel sockets:
 
-## Why This Matters
+```bash
+python -m src.make_notebook --execute --executor inprocess
+```
 
-The standard policy narrative focuses on income redistribution — reduce the Gini coefficient, improve well-being. Our analysis suggests this framing is incomplete.
+The paper uses the licensed fonts bundled in `assets/fonts/`. The scientific pipeline uses standard Python packages and does not require any private authoring runtime.
 
-**Educational inequality operates through different mechanisms:**
+## Research design
 
-1. **Access to opportunity** — wealth and location gaps in schooling determine life trajectories from childhood, constraining social mobility in ways that are viscerally felt
-2. **Horizontal inequality** — gaps between demographic groups signal fairness failures and erode social trust more than vertical income distribution
-3. **Policy legacy** — former Soviet states dominate the lowest-EII group, showing that historical policy choices have measurable decades-long effects on educational equality and potentially on happiness
+The primary exposure is the signed difference in upper-secondary completion between the highest and lowest socioeconomic quintiles, observed in the same country, survey and year. It is scaled per 10 percentage points. Relative gaps and a five-quintile rank gradient provide alternative measures. These measure attainment disparities, not test-score achievement or a formal decomposition of educational opportunity.
 
-**The implication:** Policies targeting equitable access to education — particularly across wealth and geographic lines — may improve national well-being more effectively than income redistribution alone.
+The recent cross section uses life evaluation in 2022–2024, education surveys from 2015–2021, observed Gini data from 2015–2024 and real PPP GDP per person. The full model includes the gap, log GDP, national completion and Gini.
 
-**Important caveat:** This is a cross-sectional observational study. No causal claim is made. GDP confounding (wealthier nations have both lower EII and higher happiness) is the most important unresolved threat to validity.
+The panel matches prior education blocks to disjoint three-year wellbeing windows: 2010–2012 education to 2013–2015 wellbeing, followed by three further blocks through 2022–2024. Country and period effects, country-clustered inference and a country-history bootstrap support the longitudinal comparison.
 
----
+The study reports 18 exploratory specifications, sensitivity to source coverage and model choices, two empirical bootstraps of 2,000 replications each, paired cross-validation and a separate schematic simulation. The simulation illustrates a possible measurement mechanism; it is not a fitted model of the actual countries.
+
+## Data and reproducibility
+
+| Path | Contents |
+|---|---|
+| `config.json` | Analysis windows, estimand, seeds and resampling settings |
+| `data/raw/` | Frozen source snapshots, with WIDE stored as lossless gzip |
+| `data/source_manifest.json` | Source URLs, known provenance, sizes and hashes |
+| `data/processed/` | Same-survey records, country crosswalk, samples and exclusion audits |
+| `src/analysis.py` | Cross-sectional data management, estimation, diagnostics and prediction |
+| `src/measurement.py` | Same-country comparison of three disparity measures |
+| `src/panel.py` | Longitudinal models, clustered inference and specification grid |
+| `src/simulation.py` | Schematic denominator-coupling experiment |
+| `src/verify.py` | Independent algebra, source-window and split checks |
+| `outputs/tables/` | Coefficients, resampling draws, predictions and diagnostics |
+| `outputs/figures/` | Scientific figures in PNG and vector PDF |
+
+Joins use ISO codes with explicit aliases. Conflicting required survey values invalidate a survey and remain logged. The main analysis uses no education or Gini imputation. Reported sample counts are metadata, not survey-design weights. Source extraction dates are unknown for the archived WIDE, Gini and WHR snapshots. The GDP responses were downloaded on 12 November 2026 and contain retrospective revisions.
+
+`python -m src.verify` independently reconstructs HC3 and country-clustered covariance, checks analytic leave-one-out predictions against explicit refits, audits prediction splits and survey windows, and checks the documented specification family. Computational verification does not establish exogeneity or worldwide representativeness.
 
 ## Limitations
 
-- **No causation** — cross-sectional design; reverse causality cannot be ruled out
-- **Systematic missingness** — low-income countries disproportionately missing math data; EII likely underestimates inequality for poorest nations
-- **Sample loss** — 113 of 177 countries in final sample; lost countries have higher mean EII (0.396 vs 0.359), introducing conservative bias
-- **GDP confounding** — not controlled for; most important next step
-- **Country name matching** — string-based merge loses some countries (e.g. Côte d'Ivoire encoding issue); ISO 3166-1 codes recommended for future work
-- **PCA limitation** — PC1 captures 49.2% of variance; 3 components needed for 80%
-- **Happiness subjectivity** — Cantril Ladder has known cultural response-style biases
+The samples are selective and SES definitions vary by source. Country effects remove stable additive differences but do not solve changing confounders, measurement error or the mismatch between young people's education and adults' wellbeing. Aggregate records do not provide complete household-survey sampling uncertainty. Cross-validation describes held-out countries from this observed pool, not future years or an external population.
 
----
+## Sources and rights
 
-## Citation
+- [UNESCO GEM/UIS WIDE](https://www.education-inequalities.org/about)
+- [World Happiness Report 2025](https://www.worldhappiness.report/ed/2025/)
+- [World Bank Gini](https://data.worldbank.org/indicator/SI.POV.GINI)
+- [World Bank real PPP GDP per person](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD)
 
-```bibtex
-@misc{seyedmohammadi2025inequality,
-  author    = {Seyedmohammadi, Mobin},
-  title     = {Is Educational Inequality a Stronger Predictor of 
-               National Happiness Than Income Inequality?},
-  year      = {2025},
-  publisher = {GitHub},
-  url       = {https://github.com/Mobin-Seyedmohammadi/inequality-happiness}
-}
-```
+The MIT license covers the project code and authored text, subject to third-party rights. Source datasets and referenced papers retain their own terms. The data manifest and paper provide detailed attribution.
 
----
+## Acknowledgment
 
-## License
-
-MIT License. Data used subject to terms of respective sources (UNESCO, World Bank, World Happiness Report).
+AI tools assisted with code and writing.

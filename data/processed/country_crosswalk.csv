@@ -1,0 +1,148 @@
+happiness_name,iso_code,method
+Finland,FIN,ISO exact lookup
+Denmark,DNK,ISO exact lookup
+Iceland,ISL,ISO exact lookup
+Sweden,SWE,ISO exact lookup
+Netherlands,NLD,ISO exact lookup
+Costa Rica,CRI,ISO exact lookup
+Norway,NOR,ISO exact lookup
+Israel,ISR,ISO exact lookup
+Luxembourg,LUX,ISO exact lookup
+Mexico,MEX,ISO exact lookup
+Australia,AUS,ISO exact lookup
+New Zealand,NZL,ISO exact lookup
+Switzerland,CHE,ISO exact lookup
+Belgium,BEL,ISO exact lookup
+Ireland,IRL,ISO exact lookup
+Lithuania,LTU,ISO exact lookup
+Austria,AUT,ISO exact lookup
+Canada,CAN,ISO exact lookup
+Slovenia,SVN,ISO exact lookup
+Czechia,CZE,ISO exact lookup
+United Arab Emirates,ARE,ISO exact lookup
+Germany,DEU,ISO exact lookup
+United Kingdom,GBR,ISO exact lookup
+United States,USA,ISO exact lookup
+Belize,BLZ,ISO exact lookup
+Poland,POL,ISO exact lookup
+Taiwan Province of China,TWN,explicit alias
+Uruguay,URY,ISO exact lookup
+Kosovo,XKX,explicit alias
+Kuwait,KWT,ISO exact lookup
+Serbia,SRB,ISO exact lookup
+Saudi Arabia,SAU,ISO exact lookup
+France,FRA,ISO exact lookup
+Singapore,SGP,ISO exact lookup
+Romania,ROU,ISO exact lookup
+Brazil,BRA,ISO exact lookup
+El Salvador,SLV,ISO exact lookup
+Spain,ESP,ISO exact lookup
+Estonia,EST,ISO exact lookup
+Italy,ITA,ISO exact lookup
+Panama,PAN,ISO exact lookup
+Argentina,ARG,ISO exact lookup
+Kazakhstan,KAZ,ISO exact lookup
+Guatemala,GTM,ISO exact lookup
+Chile,CHL,ISO exact lookup
+Viet Nam,VNM,ISO exact lookup
+Nicaragua,NIC,ISO exact lookup
+Malta,MLT,ISO exact lookup
+Thailand,THA,ISO exact lookup
+Slovakia,SVK,ISO exact lookup
+Latvia,LVA,ISO exact lookup
+Oman,OMN,ISO exact lookup
+Uzbekistan,UZB,ISO exact lookup
+Paraguay,PRY,ISO exact lookup
+Japan,JPN,ISO exact lookup
+Bosnia and Herzegovina,BIH,ISO exact lookup
+Philippines,PHL,ISO exact lookup
+Republic of Korea,KOR,explicit alias
+Bahrain,BHR,ISO exact lookup
+Portugal,PRT,ISO exact lookup
+Colombia,COL,ISO exact lookup
+Ecuador,ECU,ISO exact lookup
+Honduras,HND,ISO exact lookup
+Malaysia,MYS,ISO exact lookup
+Peru,PER,ISO exact lookup
+Russian Federation,RUS,ISO exact lookup
+Cyprus,CYP,ISO exact lookup
+China,CHN,ISO exact lookup
+Hungary,HUN,ISO exact lookup
+Trinidad and Tobago,TTO,ISO exact lookup
+Montenegro,MNE,ISO exact lookup
+Croatia,HRV,ISO exact lookup
+Jamaica,JAM,ISO exact lookup
+Bolivia,BOL,explicit alias
+Kyrgyzstan,KGZ,ISO exact lookup
+Dominican Republic,DOM,ISO exact lookup
+Mongolia,MNG,ISO exact lookup
+Mauritius,MUS,ISO exact lookup
+Libya,LBY,ISO exact lookup
+Republic of Moldova,MDA,explicit alias
+Greece,GRC,ISO exact lookup
+Venezuela,VEN,explicit alias
+Indonesia,IDN,ISO exact lookup
+Algeria,DZA,ISO exact lookup
+Bulgaria,BGR,ISO exact lookup
+North Macedonia,MKD,ISO exact lookup
+Armenia,ARM,ISO exact lookup
+Hong Kong SAR of China,HKG,explicit alias
+Albania,ALB,ISO exact lookup
+Tajikistan,TJK,ISO exact lookup
+Georgia,GEO,ISO exact lookup
+Nepal,NPL,ISO exact lookup
+Lao PDR,LAO,explicit alias
+Türkiye,TUR,explicit alias
+South Africa,ZAF,ISO exact lookup
+Mozambique,MOZ,ISO exact lookup
+Gabon,GAB,ISO exact lookup
+Côte d’Ivoire,CIV,explicit alias
+Iran,IRN,explicit alias
+Congo,COG,explicit alias
+Iraq,IRQ,ISO exact lookup
+Guinea,GIN,ISO exact lookup
+Namibia,NAM,ISO exact lookup
+Cameroon,CMR,ISO exact lookup
+Nigeria,NGA,ISO exact lookup
+Azerbaijan,AZE,ISO exact lookup
+Senegal,SEN,ISO exact lookup
+State of Palestine,PSE,explicit alias
+Pakistan,PAK,ISO exact lookup
+Niger,NER,ISO exact lookup
+Ukraine,UKR,ISO exact lookup
+Morocco,MAR,ISO exact lookup
+Tunisia,TUN,ISO exact lookup
+Mauritania,MRT,ISO exact lookup
+Kenya,KEN,ISO exact lookup
+Uganda,UGA,ISO exact lookup
+Gambia,GMB,ISO exact lookup
+India,IND,ISO exact lookup
+Chad,TCD,ISO exact lookup
+Burkina Faso,BFA,ISO exact lookup
+Benin,BEN,ISO exact lookup
+Somalia,SOM,ISO exact lookup
+Mali,MLI,ISO exact lookup
+Cambodia,KHM,ISO exact lookup
+Ghana,GHA,ISO exact lookup
+Myanmar,MMR,ISO exact lookup
+Togo,TGO,ISO exact lookup
+Jordan,JOR,ISO exact lookup
+Liberia,LBR,ISO exact lookup
+Madagascar,MDG,ISO exact lookup
+Zambia,ZMB,ISO exact lookup
+Ethiopia,ETH,ISO exact lookup
+Sri Lanka,LKA,ISO exact lookup
+Bangladesh,BGD,ISO exact lookup
+Egypt,EGY,ISO exact lookup
+Tanzania,TZA,explicit alias
+Eswatini,SWZ,ISO exact lookup
+Lesotho,LSO,ISO exact lookup
+Comoros,COM,ISO exact lookup
+Yemen,YEM,ISO exact lookup
+DR Congo,COD,explicit alias
+Botswana,BWA,ISO exact lookup
+Zimbabwe,ZWE,ISO exact lookup
+Malawi,MWI,ISO exact lookup
+Lebanon,LBN,ISO exact lookup
+Sierra Leone,SLE,ISO exact lookup
+Afghanistan,AFG,ISO exact lookup

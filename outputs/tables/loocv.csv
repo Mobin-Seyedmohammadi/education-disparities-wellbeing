@@ -1,0 +1,8 @@
+model,loocv_rmse
+Mean only,1.06749150295762
+Education gap,1.0767736102733267
+Gini,1.0693154216135905
+Prosperity,0.6908396400934804
+Prosperity + attainment,0.6853022610898898
+Baseline,0.6767305345911188
+Baseline + education gap,0.680447160319129

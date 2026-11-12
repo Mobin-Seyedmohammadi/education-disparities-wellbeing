@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "Every frozen input matches its SHA-256 manifest",
+    "Country keys, source windows, gap units and complete-case contracts hold",
+    "OLS coefficients and HC3 covariance match independent matrix calculations",
+    "Every CV prediction is out of fold and comparisons share identical country splits",
+    "Analytic leave-one-out errors match explicit omitted-country refits",
+    "Panel outcomes and prior-education blocks are disjoint, with no reused surveys",
+    "Country-clustered covariance and G-1 reference df match independent calculations",
+    "All disparity measures use the same countries for comparison",
+    "Both empirical bootstrap analyses completed all 2,000 replications",
+    "All 18 documented specifications and multiplicity corrections are present"
+  ]
+}

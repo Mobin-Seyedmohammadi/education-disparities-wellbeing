@@ -1,0 +1,30 @@
+{
+  "analysis_version": "2.0.0",
+  "education_start_year": 2015,
+  "education_end_year": 2021,
+  "happiness_endpoint": 2024,
+  "happiness_period": "2022-2024",
+  "gini_start_year": 2015,
+  "gini_end_year": 2024,
+  "gdp_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "bootstrap_replications": 2000,
+  "cv_folds": 5,
+  "cv_repeats": 20,
+  "seed": 271828,
+  "survey_tie_rule": "DHS first, then MICS, then alphabetical survey name",
+  "duplicate_rule": "Collapse identical values at the measurement key. Exclude an entire country-survey-year if any required wealth quintile or national completion value conflicts.",
+  "estimand": "Equal-country conditional linear association in the observed complete-case sample. The education coefficient is life-ladder points per 10 percentage-point larger signed Q5-Q1 completion gap.",
+  "analysis_scope": "Independent empirical study of socioeconomic completion gaps and national life evaluation",
+  "panel_outcome_endpoints": [
+    2015,
+    2018,
+    2021,
+    2024
+  ],
+  "panel_education_rule": "Latest valid survey in the disjoint three-year block immediately preceding each non-overlapping three-year happiness window",
+  "panel_cluster_unit": "country"
+}

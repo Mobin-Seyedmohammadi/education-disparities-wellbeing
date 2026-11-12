@@ -1,0 +1,5 @@
+measure,adjusted_for_prosperity,mean_coefficient,negative_association_detection_rate,any_sign_detection_rate
+Absolute gap,False,-0.02053796883145615,0.027,0.055
+Absolute gap,True,0.0007434480802717757,0.024,0.053
+Relative gap,False,-5.435336003351213,1.0,1.0
+Relative gap,True,-0.006223773567441312,0.019,0.042

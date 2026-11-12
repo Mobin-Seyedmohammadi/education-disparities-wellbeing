@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ladder   R-squared:                       0.646
+Model:                            OLS   Adj. R-squared:                  0.623
+Method:                 Least Squares   F-statistic:                     36.60
+Date:                Thu, 12 Nov 2026   Prob (F-statistic):           1.79e-15
+Time:                        20:33:44   Log-Likelihood:                -61.705
+No. Observations:                  65   AIC:                             133.4
+Df Residuals:                      60   BIC:                             144.3
+Df Model:                           4                                         
+Covariance Type:                  HC3                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           -1.6764      1.399     -1.198      0.236      -4.475       1.123
+log_gdp          0.5917      0.162      3.653      0.001       0.268       0.916
+completion10     0.0980      0.052      1.881      0.065      -0.006       0.202
+gini10           0.2384      0.150      1.584      0.118      -0.063       0.539
+gap10            0.0540      0.047      1.146      0.256      -0.040       0.148
+==============================================================================
+Omnibus:                        4.443   Durbin-Watson:                   2.260
+Prob(Omnibus):                  0.108   Jarque-Bera (JB):                3.852
+Skew:                          -0.592   Prob(JB):                        0.146
+Kurtosis:                       3.140   Cond. No.                         177.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

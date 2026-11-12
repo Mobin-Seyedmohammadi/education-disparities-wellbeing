@@ -1,0 +1,15 @@
+held_out_region,n_test,model,rmse
+Central and Southern Asia,7,Baseline,0.7393526258924688
+Central and Southern Asia,7,Baseline + education gap,0.7909141871126499
+Eastern and South-eastern Asia,7,Baseline,0.4651142084318952
+Eastern and South-eastern Asia,7,Baseline + education gap,0.4158786170156555
+Europe and Northern America,5,Baseline,0.45954004071290344
+Europe and Northern America,5,Baseline + education gap,0.43270084260375413
+Latin America and the Caribbean,16,Baseline,0.8740908634395347
+Latin America and the Caribbean,16,Baseline + education gap,0.9083286005283888
+Northern Africa and Western Asia,6,Baseline,1.0162834599081443
+Northern Africa and Western Asia,6,Baseline + education gap,1.0253563428011097
+Oceania,1,Baseline,0.31475291929513016
+Oceania,1,Baseline + education gap,0.41958121899781275
+Sub-Saharan Africa,23,Baseline,0.8913643341780924
+Sub-Saharan Africa,23,Baseline + education gap,0.800652273933209

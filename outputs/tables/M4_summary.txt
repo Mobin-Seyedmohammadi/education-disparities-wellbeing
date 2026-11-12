@@ -1,0 +1,27 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ladder   R-squared:                       0.622
+Model:                            OLS   Adj. R-squared:                  0.604
+Method:                 Least Squares   F-statistic:                     34.51
+Date:                Thu, 12 Nov 2026   Prob (F-statistic):           3.63e-13
+Time:                        20:33:44   Log-Likelihood:                -63.824
+No. Observations:                  65   AIC:                             135.6
+Df Residuals:                      61   BIC:                             144.3
+Df Model:                           3                                         
+Covariance Type:                  HC3                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           -0.9618      1.238     -0.777      0.440      -3.438       1.514
+log_gdp          0.6073      0.148      4.115      0.000       0.312       0.902
+completion10     0.0947      0.046      2.076      0.042       0.003       0.186
+gap10            0.0713      0.046      1.543      0.128      -0.021       0.164
+==============================================================================
+Omnibus:                        4.868   Durbin-Watson:                   2.275
+Prob(Omnibus):                  0.088   Jarque-Bera (JB):                3.944
+Skew:                          -0.549   Prob(JB):                        0.139
+Kurtosis:                       3.501   Cond. No.                         161.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

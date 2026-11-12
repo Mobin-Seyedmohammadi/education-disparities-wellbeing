@@ -1,8 +1,4 @@
 __pycache__/
-.ipynb_checkpoints/
 *.pyc
-.DS_Store
 .venv/
-venv/
-outputs/*.png
-.idea/
+.ipynb_checkpoints/

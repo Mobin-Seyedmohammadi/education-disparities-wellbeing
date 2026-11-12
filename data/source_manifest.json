@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "path": "data/raw/WIDE.csv.gz",
+      "sha256": "2db2864432535d1c69173191e74802c7e2f6569644ff85e98ec8b4ea193990ad",
+      "bytes": 17364231,
+      "provider": "UNESCO GEM Report and UIS, World Inequality Database on Education",
+      "source_url": "https://www.education-inequalities.org/about",
+      "provenance_note": "Archived source snapshot; historical extraction date unknown. Losslessly compressed for distribution. Original uncompressed SHA-256 retained.",
+      "uncompressed_sha256": "c2d3f901c71e3900cf3b99ec7ebae9b42f76b2461856eb4bad1cf6d925e47079",
+      "original_filename": "WIDE.csv",
+      "compression": "gzip, lossless"
+    },
+    {
+      "path": "data/raw/GINI.csv",
+      "sha256": "3936b186c1127d8dfcea43fc0b38845d6124ddd4b2fb0f77f062d5c857f9eda6",
+      "bytes": 74864,
+      "provider": "World Bank, SI.POV.GINI",
+      "source_url": "https://data.worldbank.org/indicator/SI.POV.GINI",
+      "provenance_note": "Archived source snapshot. Original extraction date unknown. Latest eligible observation within 2015-2024."
+    },
+    {
+      "path": "data/raw/happiness2025.xlsx",
+      "sha256": "3d1b8af60ec8b095a5d5f0ad0298b87ba2b7514bb79bf18a44c6f6ddd3280b6d",
+      "bytes": 148164,
+      "provider": "World Happiness Report 2025, Figure 2.1 data",
+      "source_url": "https://files.worldhappiness.report/WHR25_Data_Figure_2.1v3.xlsx",
+      "provenance_note": "Archived source workbook. Endpoint 2024 means the 2022-2024 life-evaluation window, not annual 2024 observations."
+    },
+    {
+      "path": "data/raw/gdp_ppp_2022_2024.json",
+      "sha256": "43918a4decc74a439ad0bf53027184f833c5ffe249ebadc0a44c72b22dec142c",
+      "bytes": 198457,
+      "provider": "World Bank, NY.GDP.PCAP.PP.KD",
+      "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=2022:2024&format=json&per_page=20000",
+      "provenance_note": "Downloaded 2026-11-12. API last update 2026-11-11. Retrospective revised macroeconomic snapshot, not real-time forecasting information."
+    },
+    {
+      "path": "data/raw/gdp_panel_2016_2018.json",
+      "sha256": "e89b8de167458e89816a91695887cfc64674f52637649478a7747f0ace53d1b0",
+      "bytes": 198508,
+      "provider": "World Bank, NY.GDP.PCAP.PP.KD",
+      "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=2016:2018&format=json&per_page=20000",
+      "provenance_note": "Downloaded 2026-11-12. API last update 2026-11-11. Frozen retrospective GDP snapshot."
+    },
+    {
+      "path": "data/raw/gdp_panel_2019_2021.json",
+      "sha256": "6d16c670f467486fd03ce08dc306a8a5c31f7cb37ca94a394619ca597734b5f3",
+      "bytes": 198531,
+      "provider": "World Bank, NY.GDP.PCAP.PP.KD",
+      "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=2019:2021&format=json&per_page=20000",
+      "provenance_note": "Downloaded 2026-11-12. API last update 2026-11-11. Frozen retrospective GDP snapshot."
+    },
+    {
+      "path": "data/raw/gdp_panel_2013_2015.json",
+      "sha256": "34520dc9067799e8b3a451328caea00084b485d4dfaccd78ad550f34a7d0d7cb",
+      "bytes": 198502,
+      "provider": "World Bank, NY.GDP.PCAP.PP.KD",
+      "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=2013:2015&format=json&per_page=10000",
+      "provenance_note": "Downloaded 2026-11-12. API last update 2026-11-11. Frozen retrospective GDP snapshot."
+    }
+  ]
+}
